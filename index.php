@@ -66,5 +66,6 @@ if( !empty( $stock ) && ( $stock == 'stock-aknowledgment' || $stock == 'upcoming
             ?>
         </div>
     </div>
+    <?php include 'footer.php'; ?>
 </body>
 </html>

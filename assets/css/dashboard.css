@@ -26,7 +26,7 @@ body {
 }
 .mims-dashbaord-wrapper .mims-dashboard-sidebar .brand-logo {
     text-align: center;
-    border-bottom: 1px solid #3291c6;
+    border-bottom: 1px solid white;
     padding: 22px 15px;
 }
 .brand-logo a {
@@ -76,6 +76,9 @@ body {
 }
 span.fa {
     margin: 0px 0.5rem 0px 0px;
+}
+table {
+    background: white;
 }
 .btn-success {
     background-color: #40a6df !important;
@@ -172,11 +175,14 @@ hr.register-hr {
 }
 footer {
     display: flex;
+    width: 100%;
     justify-content: center;
+    border-top: 6px solid #40a6df;
+    padding: 10px  0px;
+    color: #555555;
+    background-color: white;
 }
 footer h6 {
-    position: fixed;
-    bottom: 0px;
     font-size: 0.7rem;
 }
 footer a {
