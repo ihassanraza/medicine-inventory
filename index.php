@@ -1,4 +1,8 @@
 <?php
+session_start();
+if (!$_SESSION['mims']) {
+	header('Location: login.php');
+}
 include 'header.php';
 if(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on')
 $link = "https";
@@ -48,12 +52,12 @@ if( !empty( $stock ) && ( $stock == 'stock-aknowledgment' || $stock == 'upcoming
                 <li <?php if( !empty($streport_active) ) echo $streport_active; ?> ><a href="<?php echo '?stock=stock-report'; ?>"><span class="fa fa-medkit"></span>Stock Report</a></li>
                 <li <?php if( !empty($stockin_active) ) echo $stockin_active; ?> ><a href="<?php echo '?stock=stock-in'; ?>"><span class="fa fa-plus"></span>Stock In</a></li>
                 <li <?php if( !empty($allocate_active) ) echo $allocate_active; ?> ><a href="<?php echo '?stock=allocate'; ?>"><span class="fa fa-minus"></span>Allocate</a></li>
-                <li><a href="login.php"><span class="fa fa-sign-in"></span>Log Out</a></li>
+                <li><a href="logout.php"><span class="fa fa-sign-in"></span>Log Out</a></li>
             </ul>
         </div>
         <div class="mims-dashboard-container">
             <div class="dahsboard-top-header">
-                <h2>Medicine Inventory Management System</h2>
+                <h2><?php echo $_SESSION['mims']?></h2>
             </div>
             <?php
             if( isset( $stock ) && !empty( $stock )  ) {
