@@ -1,0 +1,9 @@
+$(document).ready(function(){
+    $('#data-tables').DataTable();
+    $(".dashboard-menu-button").click(function(){
+        $("body").addClass("open-dashboard");
+    });
+    $(".dashboard-overlay").click(function(){
+        $("body").removeClass("open-dashboard");
+    });
+});
