@@ -177,7 +177,7 @@ footer {
     display: flex;
     width: 100%;
     justify-content: center;
-    border-top: 6px solid #40a6df;
+    border-top: 2px solid #40a6df;
     padding: 10px  0px;
     color: #555555;
     background-color: white;
