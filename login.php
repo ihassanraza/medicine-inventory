@@ -12,6 +12,7 @@ if( isset( $_POST['login'] ) ) {
         $fetch = mysqli_fetch_array( $query );
         $fetch_password = $fetch['password'];
         $_SESSION['mims'] = 'Medicine Inventory Management System';
+        $_SESSION['id'] = $fetch['id'];
         if( $password === $fetch_password ) {
             header('Location: http://localhost/medicine-inventory/');
         }
