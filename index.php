@@ -63,6 +63,38 @@ if( !empty( $stock ) && ( $stock == 'stock-aknowledgment' || $stock == 'upcoming
             if( isset( $stock ) && !empty( $stock )  ) {
                 require_once 'stock/'.$stock.'.php';
             }
+            else{
+                ?>
+                <div class="mims-main-screen">
+                    <h3 class="mt-4">Top 10 Upcoming Medicines To Be Expired</h1>
+                    <nav class="mt-5">
+                        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                            <button class="nav-link active" id="one-month-tab" data-bs-toggle="tab" data-bs-target="#one-month" type="button" role="tab" aria-controls="one-month" aria-selected="true">1 Month</button>
+                            <button class="nav-link" id="three-month-tab" data-bs-toggle="tab" data-bs-target="#three-month" type="button" role="tab" aria-controls="three-month" aria-selected="false">3 Month</button>
+                            <button class="nav-link" id="six-month-tab" data-bs-toggle="tab" data-bs-target="#six-month" type="button" role="tab" aria-controls="six-month" aria-selected="false">6 Month</button>
+                        </div>
+                    </nav>
+                    <div class="tab-content" id="nav-tabContent">
+                        <h2 class="pt-4">Top 10 Upcoming Medicines To Be Expired</h4>
+                        <div class="tab-pane fade show active" id="one-month" role="tabpanel" aria-labelledby="one-month-tab">
+                            <div class="chart-container">
+                                <canvas id="myChart"></canvas>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="three-month" role="tabpanel" aria-labelledby="three-month-tab">
+                            <div class="chart-container">
+                                <canvas id="threemonth"></canvas>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="six-month" role="tabpanel" aria-labelledby="six-month-tab">
+                            <div class="chart-container">
+                                <canvas id="sixmonth"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <?php
+            }
             ?>
         </div>
     </div>
